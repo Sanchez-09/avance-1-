@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tacos Mexicanos Originales en Costa Rica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .page-container {
+            width: 100%;
+            max-width: 1440px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+        .section-frame {
+            position: relative;
+            width: 1440px;
+            height: 1024px;
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Fondo Rojo Principal */
+        .rectangle-1 {
+            position: absolute;
+            width: 1440px;
+            height: 1024px;
+            left: 0px;
+            top: 0px;
+            background: #FF0000;
+            z-index: 1;
+        }
+
+        /* Gradiente Superior */
+        .vector-1 {
+            position: absolute;
+            width: 1512.5px;
+            height: 878px;
+            left: -36px;
+            top: 0px;
+            background: linear-gradient(180deg, rgba(185, 81, 110, 0) 0%, #FFCC00 0.01%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* --- SECCIÓN 1: CABECERA --- */
+        .hero-content {
+            position: absolute;
+            left: 151px;
+            top: 50px;
+            z-index: 6;
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: 0.1em;
+            color: #000000;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: #000000;
+            line-height: 1.4;
+            max-width: 450px;
+        }
+
+        /* Imagen del Chile Principal */
+        .chili-image {
+            position: absolute;
+            width: 410px;
+            height: 606px;
+            left: 800px;
+            top: 100px;
+            background: url('image 1.jpg') center/cover no-repeat;
+            border-radius: 201.5px;
+            z-index: 4;
+        }
+
+        /* --- SECCIÓN 2: SUCURSALES (Tarjetas de imagen completa) --- */
+        .sucursales-title-container {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 25px;
+            z-index: 6;
+        }
+
+        .sucursales-title {
+            font-size: 28px;
+            font-weight: 900;
+            color: #000000;
+            letter-spacing: 0.05em;
+            text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .branch-card-left {
+            position: absolute;
+            width: 400px;
+            height: 610px;
+            left: 200px;
+            top: 100px;
+            background: url('image 6.png') center/contain no-repeat;
+            z-index: 5;
+        }
+
+        .branch-card-right {
+            position: absolute;
+            width: 400px;
+            height: 610px;
+            left: 840px;
+            top: 100px;
+            background: url('image 5.png') center/contain no-repeat;
+            z-index: 5;
+        }
+
+        /* --- REDES SOCIALES --- */
+        .redes-label {
+            position: absolute;
+            left: 150px;
+            top: 700px;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #EBB9CB 0%, #000000 60.71%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 6;
+        }
+
+        .social-cards-wrapper {
+            position: absolute;
+            left: 140px;
+            top: 735px;
+            display: flex;
+            gap: 30px;
+            z-index: 5;
+        }
+
+        .social-card {
+            width: 194px;
+            height: 220px;
+            background: linear-gradient(138.57deg, rgba(255, 255, 255, 0.25) 7.12%, rgba(196, 196, 196, 0.05) 96.25%);
+            backdrop-filter: blur(25px);
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .social-icon-box {
+            width: 160px;
+            height: 160px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .icon-tiktok { background-image: url('Group 4.png'); }
+        .icon-instagram { background-image: url('Group 9.png'); }
+        .icon-facebook { background-image: url('Group 10.png'); }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <!-- PANTALLA 1: PRESENTACIÓN PRINCIPAL -->
+        <div class="section-frame">
+            <div class="rectangle-1"></div>
+            <div class="vector-1"></div>
+
+            <div class="hero-content">
+                <h1 class="hero-title">Tacos Mexicanos Originales en Costa Rica</h1>
+                <p class="hero-subtitle">Sabor auténtico, ingredientes naturales y mucho amor en cada preparación.</p>
+            </div>
+
+            <div class="chili-image"></div>
+
+            <div class="redes-label">Redes sociales</div>
+
+            <div class="social-cards-wrapper">
+                <div class="social-card">
+                    <div class="social-icon-box icon-tiktok"></div>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon-box icon-instagram"></div>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon-box icon-facebook"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANTALLA 2: SUCURSALES -->
+        <div class="section-frame">
+            <div class="rectangle-1"></div>
+            <div class="vector-1"></div>
+
+            <div class="sucursales-title-container">
+                <h2 class="sucursales-title">Ven a conocernos! Encuentra tu local más cercano y disfruta de nuestro sabor</h2>
+            </div>
+
+            <!-- Tarjeta Izquierda (Guadalupe, Tibás, Alajuelita - image 6.png) -->
+            <div class="branch-card-left"></div>
+
+            <!-- Tarjeta Derecha (Desamparados, Hatillo, Coronado - image 5.png) -->
+            <div class="branch-card-right"></div>
+
+            <div class="redes-label">Redes sociales</div>
+
+            <div class="social-cards-wrapper">
+                <div class="social-card">
+                    <div class="social-icon-box icon-tiktok"></div>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon-box icon-instagram"></div>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon-box icon-facebook"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
